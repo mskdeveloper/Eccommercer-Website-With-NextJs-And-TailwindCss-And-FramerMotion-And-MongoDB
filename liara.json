@@ -1,7 +1,10 @@
 {
-"port":3000
-"build":{
-"location":"iran"
-}
-"disks":[]
+  "next": {
+    "mirror": false
+  },
+  "port": 3000,
+  "build": {
+    "location": "iran"
+  },
+  "disks": []
 }
