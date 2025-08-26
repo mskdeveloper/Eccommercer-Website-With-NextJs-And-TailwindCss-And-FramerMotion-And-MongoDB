@@ -1,6 +1,6 @@
 {
   "next": {
-    "mirror": false
+    "mirror": true
   },
   "port": 3000,
   "build": {
