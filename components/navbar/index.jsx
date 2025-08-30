@@ -84,11 +84,16 @@ const Navbar = () => {
             <ul className="flex md:flex-row flex-col md:items-center">
               {menuContent.map((item) => (
                 <li
-                  className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 p-3 hover:bg-gray-500 hover:text-white"
+                  className=""
                   key={item.pageName}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Link href={item.href}>{item.pageName}</Link>
+                  <Link
+                    className="p-3 flex active:bg-gray-600 active:text-white rounded-2xl"
+                    href={item.href}
+                  >
+                    {item.pageName}
+                  </Link>
                 </li>
               ))}
             </ul>
