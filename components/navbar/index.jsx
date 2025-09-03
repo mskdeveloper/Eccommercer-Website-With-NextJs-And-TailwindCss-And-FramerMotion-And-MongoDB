@@ -3,7 +3,12 @@ import styles from "./index.module.css";
 import Image from "next/image";
 import logo from "@/public/images/Logo.png";
 import Link from "next/link";
-import { IoReorderFourOutline, IoCloseOutline } from "react-icons/io5";
+import {
+  IoReorderFourOutline,
+  IoCloseOutline,
+  IoLogInOutline,
+  IoCartOutline,
+} from "react-icons/io5";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
@@ -20,8 +25,8 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar Section */}
-      <div className="px-1">
-        <nav className="container flex justify-between items-center mx-auto py-3 border border-gray-400 rounded mt-1 px-1">
+      <div className="px-1 bg-blue-50">
+        <nav className="container flex justify-between items-center mx-auto py-3 mt-3 px-1 ">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="flex md:hidden"
@@ -41,7 +46,7 @@ const Navbar = () => {
 
           {/* Menu Section */}
           <div
-            className={`duration-500 hidden bg-white md:min-h-fit min-h-[60vh] right-0 top-[-100%] md:w-auto  w-full md:flex items-center px-5 ${
+            className={`duration-500 hidden  md:min-h-fit min-h-[60vh] right-0 top-[-100%] md:w-auto  w-full md:flex items-center px-5 ${
               isMenuOpen ? "top-[9%]" : "top-[-100%]"
             }`}
           >
@@ -63,9 +68,16 @@ const Navbar = () => {
           </div>
 
           {/* Button Section */}
-          <div className="flex items-center gap-6">
-            <button className="px-4 py-3 text-white  rounded-full cursor-pointer bg-blue-500 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-blue-400">
-              <Link href="/signin">عضویت</Link>
+          <div className="flex items-center gap-3">
+            <button className="text-xl px-2 py-2 text-white  rounded-full cursor-pointer bg-blue-500 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-blue-400">
+              <Link href="/cart">
+                <IoCartOutline />
+              </Link>
+            </button>
+            <button className="text-xl px-2 py-2 text-white  rounded-full cursor-pointer bg-lime-500 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-lime-400">
+              <Link href="/login">
+                <IoLogInOutline />
+              </Link>
             </button>
           </div>
         </nav>
