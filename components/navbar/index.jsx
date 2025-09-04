@@ -26,7 +26,7 @@ const Navbar = () => {
     <>
       {/* Navbar Section */}
       <div className="px-1 bg-blue-50">
-        <nav className="container flex justify-between items-center mx-auto py-3 mt-3 px-1 ">
+        <nav className="container flex justify-between items-center mx-auto py-1 mt-3 px-1 ">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="flex md:hidden"
@@ -91,7 +91,7 @@ const Navbar = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             key="box"
-            className={`bg-white absolute md:min-h-fit  right-0 md:w-auto  w-full items-center pt-1 px-7 md:hidden `}
+            className={`bg-white absolute md:min-h-fit  right-0 md:w-auto  w-full items-center pt-1 px-7 md:hidden z-10`}
           >
             <ul className="flex md:flex-row flex-col md:items-center">
               {menuContent.map((item) => (
