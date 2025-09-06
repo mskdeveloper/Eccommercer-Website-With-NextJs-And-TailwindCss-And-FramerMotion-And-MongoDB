@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "mongodb": "^6.19.0",
     "mongoose": "^8.18.0",
     "motion": "^12.23.12",
     "next": "15.5.0",

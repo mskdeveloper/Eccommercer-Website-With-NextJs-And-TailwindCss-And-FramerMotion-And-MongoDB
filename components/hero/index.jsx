@@ -1,5 +1,4 @@
 import Image from "next/image";
-import banner from "@/public/images/hero/banner.jpg";
 import banner1 from "@/public/images/hero/banner1.jpg";
 import banner2 from "@/public/images/hero/banner2.jpg";
 import Slider from "../slider";

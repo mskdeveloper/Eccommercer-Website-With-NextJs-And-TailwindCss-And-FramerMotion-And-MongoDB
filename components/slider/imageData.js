@@ -1,6 +1,6 @@
-import slider1 from "@/components/slider/images/banner.jpg";
-import slider2 from "@/components/slider/images/banner1.jpg";
-import slider3 from "@/components/slider/images/banner2.jpg";
+import slider1 from "@/public/images/slider/banner.jpg";
+import slider2 from "@/public/images/slider/banner1.jpg";
+import slider3 from "@/public/images/slider/banner2.jpg";
 
 export const slides = [
   { id: 1, src: slider1 },
