@@ -11,9 +11,16 @@ import {
 } from "react-icons/io5";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const cartItems = useSelector((state) => state.cart.items);
+  const cartItemCount = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   const menuContent = [
     { pageName: "صفحه اصلی", href: "/" },
@@ -70,7 +77,10 @@ const Navbar = () => {
           {/* Button Section */}
           <div className="flex items-center gap-3">
             <button className="text-xl px-2 py-2 text-white  rounded-full cursor-pointer bg-blue-500 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-blue-400">
-              <Link href="/cart">
+              <Link href="/cart" className="flex items-center">
+                {/* Items Count */}
+                <p className="ml-2 text-sm">{cartItemCount}</p>
+
                 <IoCartOutline />
               </Link>
             </button>

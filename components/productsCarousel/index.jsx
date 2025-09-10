@@ -1,6 +1,7 @@
 "use client";
 import { productsDetails } from "./productDetail";
-import { IoChevronBackOutline, IoPricetagsOutline } from "react-icons/io5";
+import { IoChevronBackOutline } from "react-icons/io5";
+import ProductCard from "../productCard";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,7 +12,6 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
-import Image from "next/image";
 
 export default function ProductsCarousel() {
   return (
@@ -48,19 +48,7 @@ export default function ProductsCarousel() {
         >
           {productsDetails.map((card) => (
             <SwiperSlide className="flex flex-col bg-white rounded-xl p-5">
-              <div>
-                <Image alt={card.title} src={card.img} />
-              </div>
-              <div className="flex flex-col gap-3 px-3">
-                <h2 className="text-xl">{card.title}</h2>
-                <p>{card.desc}</p>
-                <div className="flex justify-end gap-3 items-center">
-                  <span className=" text-xl">{card.price}</span>
-                  <span className="text-red-500">
-                    <IoPricetagsOutline />
-                  </span>
-                </div>
-              </div>
+              <ProductCard {...card} />
             </SwiperSlide>
           ))}
         </Swiper>
